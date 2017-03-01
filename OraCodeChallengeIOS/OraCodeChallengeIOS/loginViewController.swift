@@ -10,7 +10,7 @@ import UIKit
 
 class loginViewController: UIViewController {
     
-    let loginIdentifier = "loginIdentifier"
+    let loginIdentifier = "Login"
     
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -19,7 +19,7 @@ class loginViewController: UIViewController {
     @IBAction func loginButton(_ sender: UIButton) {
         if(usernameTextField.text != "" || passwordTextField.text != ""){
             
-            performSegue(withIdentifier: loginIdentifier, sender: nil)
+            performSegue(withIdentifier: loginIdentifier, sender: self)
         }
     }
     
@@ -27,7 +27,7 @@ class loginViewController: UIViewController {
     @IBAction func registerButton(_ sender: UIButton) {
         if(usernameTextField.text != "" || passwordTextField.text != ""){
             
-            performSegue(withIdentifier: loginIdentifier, sender: nil)
+            performSegue(withIdentifier: loginIdentifier, sender: self)
         }
     }
 

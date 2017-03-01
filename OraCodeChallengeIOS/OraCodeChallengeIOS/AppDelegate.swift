@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  OraCodeChallengeIOS
 //
-//  Created by Addison Kremer on 1/5/17.
+//  Created by Chris Samp on 1/5/17.
 //  Copyright © 2017 OraCode. All rights reserved.
 //
 

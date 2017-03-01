@@ -1,24 +1,25 @@
 //
-//  MainMenuViewController.swift
+//  TabBarViewController.swift
 //  OraCodeChallengeIOS
 //
-//  Created by Chris Samp on 1/5/17.
+//  Created by Christopher Samp on 2/28/17.
 //  Copyright © 2017 OraCode. All rights reserved.
 //
 
 import UIKit
 
-class MainMenuViewController: UITabBarController {
-    
-    var username : String!
-    var password : String!
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(username)
+
         // Do any additional setup after loading the view.
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
     /*
