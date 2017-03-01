@@ -35,9 +35,11 @@
                     <constraint firstItem="1O7-m0-EpH" firstAttribute="leading" secondItem="DNB-7E-3Ef" secondAttribute="trailing" constant="131" id="59q-x9-frI"/>
                     <constraint firstItem="DNB-7E-3Ef" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="5dZ-L1-i32"/>
                     <constraint firstItem="1O7-m0-EpH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7k5-BV-Khq"/>
+                    <constraint firstItem="DNB-7E-3Ef" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8HW-Ps-Sep"/>
                     <constraint firstAttribute="bottom" secondItem="1O7-m0-EpH" secondAttribute="bottom" constant="8" id="Dmg-D0-0Zg"/>
                     <constraint firstItem="DNB-7E-3Ef" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Qkb-GS-p4h"/>
                     <constraint firstAttribute="trailing" secondItem="1O7-m0-EpH" secondAttribute="trailing" id="TY9-Ow-cU1"/>
+                    <constraint firstItem="1O7-m0-EpH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zyh-vp-Jhl"/>
                     <constraint firstItem="1O7-m0-EpH" firstAttribute="height" secondItem="DNB-7E-3Ef" secondAttribute="height" id="hF5-er-jf1"/>
                     <constraint firstAttribute="bottom" secondItem="DNB-7E-3Ef" secondAttribute="bottom" constant="11" id="hO1-9U-Qza"/>
                 </constraints>

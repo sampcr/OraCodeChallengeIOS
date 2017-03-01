@@ -9,6 +9,7 @@
 import UIKit
 
 struct cellData{
+    var type: Int;
     var label : String;
     var text : String;
 }
@@ -18,10 +19,10 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        data = [cellData(label: "Name", text: ""),
-                cellData(label: "Email", text: ""),
-                cellData(label: "Password", text: ""),
-                cellData(label: "Confirm", text: "")];
+        data = [cellData(type: 1,label: "Name", text: ""),
+                cellData(type: 1,label: "Email", text: ""),
+                cellData(type: 2,label: "Password", text: ""),
+                cellData(type: 2,label: "Confirm", text: "")];
         print("loaded table view");
         
     }
@@ -35,9 +36,30 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("TableViewCellText", owner: self, options: nil)?.first as! TableViewCellText;
+        if(data[indexPath.row].type == 1){
+            let cell = Bundle.main.loadNibNamed("TableViewCellText", owner: self, options: nil)?.first as! TableViewCellText;
+            
+            cell.cellLabel.text = data[indexPath.row].label;
+            cell.cellText.text = data[indexPath.row].text;
+            
+            return cell;
+        } else if(data[indexPath.row].type == 2){
+            let cell = Bundle.main.loadNibNamed("TableViewCellPass", owner: self, options: nil)?.first as! TableViewCellPass;
+            
+            cell.cellLabel.text = data[indexPath.row].label;
+            cell.cellText.text = data[indexPath.row].text;
+            
+            return cell;
+        } else {
+            let cell = Bundle.main.loadNibNamed("TableViewCellText", owner: self, options: nil)?.first as! TableViewCellText;
+            
+            cell.cellLabel.text = data[indexPath.row].label;
+            cell.cellText.text = data[indexPath.row].text;
+            
+            return cell;
+
+        }
         
-        cell.
         
         
         

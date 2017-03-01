@@ -202,9 +202,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19C-vC-FG7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19C-vC-FG7">
+                                <rect key="frame" x="0.0" y="101" width="375" height="566"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="3B2-Jv-jQj" customClass="TableViewCellText" customModule="OraCodeChallengeIOS" customModuleProvider="target">
@@ -221,8 +220,23 @@
                                     <outlet property="delegate" destination="6oE-VD-IKd" id="opB-Ql-lMR"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kS-an-6Ng">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="2jG-PY-jgo"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="19C-vC-FG7" firstAttribute="leading" secondItem="gYp-Oe-2iQ" secondAttribute="leading" id="0UV-pc-k2A"/>
+                            <constraint firstItem="2kS-an-6Ng" firstAttribute="leading" secondItem="gYp-Oe-2iQ" secondAttribute="leading" id="6yx-4J-TvR"/>
+                            <constraint firstItem="19C-vC-FG7" firstAttribute="top" secondItem="OLK-L1-UvZ" secondAttribute="bottom" constant="81" id="JzR-ZA-tpW"/>
+                            <constraint firstItem="2kS-an-6Ng" firstAttribute="top" secondItem="OLK-L1-UvZ" secondAttribute="bottom" id="PGt-nA-shp"/>
+                            <constraint firstAttribute="trailing" secondItem="2kS-an-6Ng" secondAttribute="trailing" id="Xaz-ud-3xn"/>
+                            <constraint firstAttribute="bottom" secondItem="19C-vC-FG7" secondAttribute="bottom" id="ndx-Ef-5nh"/>
+                            <constraint firstAttribute="trailing" secondItem="19C-vC-FG7" secondAttribute="trailing" id="yst-NN-yeO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="DFJ-RX-9D7"/>
                 </viewController>
