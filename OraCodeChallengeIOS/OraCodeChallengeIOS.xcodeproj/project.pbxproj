@@ -13,6 +13,7 @@
 		83FADB271E672D33008CF23B /* TableViewCellText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FADB251E672D33008CF23B /* TableViewCellText.xib */; };
 		83FADB2C1E6735E1008CF23B /* TableViewCellPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADB2A1E6735E1008CF23B /* TableViewCellPass.swift */; };
 		83FADB2D1E6735E1008CF23B /* TableViewCellPass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FADB2B1E6735E1008CF23B /* TableViewCellPass.xib */; };
+		83FADB2F1E675133008CF23B /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADB2E1E675133008CF23B /* registerViewController.swift */; };
 		F4CD04D11E1F19C500F0D733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD04D01E1F19C500F0D733 /* AppDelegate.swift */; };
 		F4CD04D61E1F19C500F0D733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CD04D41E1F19C500F0D733 /* Main.storyboard */; };
 		F4CD04D91E1F19C500F0D733 /* OraCodeChallengeIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4CD04D71E1F19C500F0D733 /* OraCodeChallengeIOS.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		83FADB251E672D33008CF23B /* TableViewCellText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellText.xib; sourceTree = "<group>"; };
 		83FADB2A1E6735E1008CF23B /* TableViewCellPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellPass.swift; path = ../TableViewCellPass.swift; sourceTree = "<group>"; };
 		83FADB2B1E6735E1008CF23B /* TableViewCellPass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellPass.xib; path = ../TableViewCellPass.xib; sourceTree = "<group>"; };
+		83FADB2E1E675133008CF23B /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		F4CD04CD1E1F19C500F0D733 /* OraCodeChallengeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraCodeChallengeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CD04D01E1F19C500F0D733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CD04D51E1F19C500F0D733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				83FADB2B1E6735E1008CF23B /* TableViewCellPass.xib */,
 				F4CD04D01E1F19C500F0D733 /* AppDelegate.swift */,
 				F4CD04D41E1F19C500F0D733 /* Main.storyboard */,
+				83FADB2E1E675133008CF23B /* registerViewController.swift */,
 				83FADB201E66461C008CF23B /* TabBarViewController.swift */,
 				F4CD04DA1E1F19C500F0D733 /* Assets.xcassets */,
 				F4CD04DC1E1F19C500F0D733 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				F4CD04EC1E1F3E5C00F0D733 /* MainMenuViewController.swift in Sources */,
 				F4CD04EA1E1F2E3400F0D733 /* loginViewController.swift in Sources */,
 				83FADB231E6650C4008CF23B /* accountTableViewController.swift in Sources */,
+				83FADB2F1E675133008CF23B /* registerViewController.swift in Sources */,
 				F4CD04D11E1F19C500F0D733 /* AppDelegate.swift in Sources */,
 				83FADB2C1E6735E1008CF23B /* TableViewCellPass.swift in Sources */,
 				83FADB211E66461C008CF23B /* TabBarViewController.swift in Sources */,

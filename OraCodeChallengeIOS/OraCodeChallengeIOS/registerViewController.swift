@@ -1,4 +1,14 @@
 //
+//  registerViewController.swift
+//  OraCodeChallengeIOS
+//
+//  Created by Christopher Samp on 3/1/17.
+//  Copyright © 2017 OraCode. All rights reserved.
+//
+
+import UIKit
+
+//
 //  accountTableViewController.swift
 //  OraCodeChallengeIOS
 //
@@ -8,21 +18,25 @@
 
 import UIKit
 
-struct cellData{
-    var type: Int;
-    var label : String;
-    var text : String;
-}
 
-class accountTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class registerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var data = [cellData] ();
     var textCells = [TableViewCellText]();
     var passCells = [TableViewCellPass]();
     var completed = true;
     
-    @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBOutlet weak var alertLabel: UILabel!
+    var username : String!
+    var password : String!
     
+    
+    @IBAction func loginButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func registerButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var alertLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -68,7 +82,7 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
             completed = true;
         }
     }
-
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
@@ -83,19 +97,30 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
             let cell = Bundle.main.loadNibNamed("TableViewCellText", owner: self, options: nil)?.first as! TableViewCellText;
             
             cell.cellLabel.text = data[indexPath.row].label;
-            cell.cellText.text = data[indexPath.row].text;
-            textCells.append(cell);
+            if(data[indexPath.row].label == "Name"){
+                cell.cellText.text = username;
+            }else {
+                cell.cellText.text = data[indexPath.row].text;
 
+            }
+            textCells.append(cell);
+            
             
             return cell;
         } else if(data[indexPath.row].type == 2){
             let cell = Bundle.main.loadNibNamed("TableViewCellPass", owner: self, options: nil)?.first as! TableViewCellPass;
             
             cell.cellLabel.text = data[indexPath.row].label;
-            cell.cellText.text = data[indexPath.row].text;
+            if(data[indexPath.row].label == "Password"){
+                cell.cellText.text = password;
+
+            }else {
+                cell.cellText.text = data[indexPath.row].text;
+
+            }
             passCells.append(cell);
-
-
+            
+            
             
             return cell;
         } else {
@@ -111,3 +136,4 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
         
     }
 }
+

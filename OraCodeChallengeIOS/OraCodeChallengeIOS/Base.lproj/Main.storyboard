@@ -75,6 +75,7 @@
                                         </state>
                                         <connections>
                                             <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N82-Wj-C65"/>
+                                            <segue destination="nz2-cj-sbC" kind="show" identifier="Register" id="PbY-gy-xLi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-ns-t32">
@@ -125,6 +126,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="08i-SW-6Vz">
+            <objects>
+                <viewController id="nz2-cj-sbC" customClass="registerViewController" customModule="OraCodeChallengeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zMf-u7-EbU"/>
+                        <viewControllerLayoutGuide type="bottom" id="JJ0-1O-iBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KFk-0n-u0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BXB-LD-ihG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out entire form before submitting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iop-4L-9WC">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.099114384230000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iGe-Ec-bJ0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iGe-Ec-bJ0" id="LgT-Sl-uXM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nz2-cj-sbC" id="qrk-nD-RWE"/>
+                                    <outlet property="delegate" destination="nz2-cj-sbC" id="uFm-Od-buD"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-s5-ARe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="OraChat" id="YbL-cZ-K37">
+                                        <barButtonItem key="leftBarButtonItem" title="Login" id="T7M-Df-kMO">
+                                            <connections>
+                                                <action selector="loginButton:" destination="nz2-cj-sbC" id="eb5-4G-map"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="BackToLogin" action="showDetailViewController:sender:" id="Jdo-EJ-W5n"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Register" style="plain" id="nJE-Mk-Leq">
+                                            <connections>
+                                                <action selector="registerButton:" destination="nz2-cj-sbC" id="2QD-d5-HMB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BXB-LD-ihG" secondAttribute="trailing" id="6B1-2n-IGv"/>
+                            <constraint firstItem="ZiF-s5-ARe" firstAttribute="top" secondItem="zMf-u7-EbU" secondAttribute="bottom" id="BGl-qo-lYg"/>
+                            <constraint firstItem="JJ0-1O-iBv" firstAttribute="top" secondItem="BXB-LD-ihG" secondAttribute="bottom" id="Ccl-jF-aUv"/>
+                            <constraint firstItem="BXB-LD-ihG" firstAttribute="leading" secondItem="KFk-0n-u0Q" secondAttribute="leading" id="OPJ-2C-X9g"/>
+                            <constraint firstItem="ZiF-s5-ARe" firstAttribute="leading" secondItem="KFk-0n-u0Q" secondAttribute="leading" id="aFn-Vv-zmT"/>
+                            <constraint firstItem="BXB-LD-ihG" firstAttribute="top" secondItem="zMf-u7-EbU" secondAttribute="bottom" constant="44" id="go0-0V-tJG"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiF-s5-ARe" secondAttribute="trailing" id="hWi-8S-O0c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertLabel" destination="Iop-4L-9WC" id="Mfn-14-onw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8K-fQ-L1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="739.88005997001505"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="7nL-fI-9Gy">
@@ -205,6 +281,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19C-vC-FG7">
                                 <rect key="frame" x="0.0" y="101" width="375" height="566"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out entire form before submitting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVO-aZ-Uog">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.09911438423289165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="3B2-Jv-jQj" customClass="TableViewCellText" customModule="OraCodeChallengeIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -223,7 +306,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kS-an-6Ng">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="2jG-PY-jgo"/>
+                                    <navigationItem title="Account" id="2jG-PY-jgo">
+                                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="hfp-Ie-lSo">
+                                            <connections>
+                                                <action selector="saveButtonClicked:" destination="6oE-VD-IKd" id="seR-Aq-kE0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -239,8 +328,83 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="DFJ-RX-9D7"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="zVO-aZ-Uog" id="7Cr-oY-Uso"/>
+                        <outlet property="saveButton" destination="hfp-Ie-lSo" id="JN5-YL-NEJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYj-y2-7ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845.5999999999999" y="178.56071964017991"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="GIR-yv-i1r">
+            <objects>
+                <viewController id="lgM-GR-goL" customClass="accountTableViewController" customModule="OraCodeChallengeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLI-wb-TFt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sbt-wn-Kdg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B5c-O1-BZK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oqk-sB-dX9">
+                                <rect key="frame" x="0.0" y="101" width="375" height="566"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out entire form before submitting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uFP-8r-rIo">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.099114384230000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="DkE-Hh-lxG" customClass="TableViewCellText" customModule="OraCodeChallengeIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DkE-Hh-lxG" id="SnS-Fh-hdf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lgM-GR-goL" id="cny-ev-SCD"/>
+                                    <outlet property="delegate" destination="lgM-GR-goL" id="vDF-Wf-Nwt"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HZ-vE-aub">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Account" id="b6W-qj-Oio">
+                                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="YUb-5L-IFD">
+                                            <connections>
+                                                <action selector="saveButtonClicked:" destination="lgM-GR-goL" id="ltY-Td-vlU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oqk-sB-dX9" firstAttribute="leading" secondItem="B5c-O1-BZK" secondAttribute="leading" id="MDU-bV-AhX"/>
+                            <constraint firstAttribute="trailing" secondItem="Oqk-sB-dX9" secondAttribute="trailing" id="ab7-ye-Li3"/>
+                            <constraint firstItem="Oqk-sB-dX9" firstAttribute="top" secondItem="YLI-wb-TFt" secondAttribute="bottom" constant="81" id="b52-8g-MLS"/>
+                            <constraint firstAttribute="trailing" secondItem="7HZ-vE-aub" secondAttribute="trailing" id="dyx-2C-Qgp"/>
+                            <constraint firstItem="7HZ-vE-aub" firstAttribute="leading" secondItem="B5c-O1-BZK" secondAttribute="leading" id="o24-q0-Gfs"/>
+                            <constraint firstItem="7HZ-vE-aub" firstAttribute="top" secondItem="YLI-wb-TFt" secondAttribute="bottom" id="tAJ-LC-Ndq"/>
+                            <constraint firstAttribute="bottom" secondItem="Oqk-sB-dX9" secondAttribute="bottom" id="wjr-sN-ZZI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" id="4FT-KC-Qz7"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="uFP-8r-rIo" id="eXS-0y-iPC"/>
+                        <outlet property="saveButton" destination="YUb-5L-IFD" id="8e5-X9-bE1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckR-aQ-ukN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845.5999999999999" y="178.56071964017991"/>
         </scene>

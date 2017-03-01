@@ -15,5 +15,8 @@ class TableViewCellPass: UITableViewCell {
     
     @IBOutlet weak var cellText: UITextField!
     
+    func updateTextField(){
+        print(cellText.text ?? "");
+    }
     
 }
