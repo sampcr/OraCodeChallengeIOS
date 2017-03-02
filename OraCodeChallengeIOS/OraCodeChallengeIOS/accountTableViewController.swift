@@ -19,6 +19,9 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
     var textCells = [TableViewCellText]();
     var passCells = [TableViewCellPass]();
     var completed = true;
+    var name : String = ""
+    var email: String = ""
+    var password: String = ""
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var alertLabel: UILabel!
@@ -26,9 +29,10 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        data = [cellData(type: 1,label: "Name", text: ""),
-                cellData(type: 1,label: "Email", text: ""),
-                cellData(type: 2,label: "Password", text: ""),
+        
+        data = [cellData(type: 1,label: "Name", text: name),
+                cellData(type: 1,label: "Email", text: email),
+                cellData(type: 2,label: "Password", text: password),
                 cellData(type: 2,label: "Confirm", text: "")];
         
         print("loaded table view");

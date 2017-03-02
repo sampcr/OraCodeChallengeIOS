@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8353516A1E688CEB0003E40B /* chatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835351681E688CEB0003E40B /* chatsCell.swift */; };
+		8353516B1E688CEB0003E40B /* chatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835351691E688CEB0003E40B /* chatsCell.xib */; };
+		8353516D1E688FA00003E40B /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8353516C1E688FA00003E40B /* ChatsTableViewController.swift */; };
 		83FADB211E66461C008CF23B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADB201E66461C008CF23B /* TabBarViewController.swift */; };
 		83FADB231E6650C4008CF23B /* accountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADB221E6650C4008CF23B /* accountTableViewController.swift */; };
 		83FADB261E672D33008CF23B /* TableViewCellText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADB241E672D33008CF23B /* TableViewCellText.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		835351681E688CEB0003E40B /* chatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatsCell.swift; sourceTree = "<group>"; };
+		835351691E688CEB0003E40B /* chatsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chatsCell.xib; sourceTree = "<group>"; };
+		8353516C1E688FA00003E40B /* ChatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		83FADB201E66461C008CF23B /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		83FADB221E6650C4008CF23B /* accountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountTableViewController.swift; sourceTree = "<group>"; };
 		83FADB241E672D33008CF23B /* TableViewCellText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellText.swift; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 				83FADB2B1E6735E1008CF23B /* TableViewCellPass.xib */,
 				F4CD04D01E1F19C500F0D733 /* AppDelegate.swift */,
 				F4CD04D41E1F19C500F0D733 /* Main.storyboard */,
+				8353516C1E688FA00003E40B /* ChatsTableViewController.swift */,
+				835351681E688CEB0003E40B /* chatsCell.swift */,
+				835351691E688CEB0003E40B /* chatsCell.xib */,
 				83FADB2E1E675133008CF23B /* registerViewController.swift */,
 				83FADB201E66461C008CF23B /* TabBarViewController.swift */,
 				F4CD04DA1E1F19C500F0D733 /* Assets.xcassets */,
@@ -155,6 +164,7 @@
 				F4CD04DB1E1F19C500F0D733 /* Assets.xcassets in Resources */,
 				83FADB271E672D33008CF23B /* TableViewCellText.xib in Resources */,
 				F4CD04D61E1F19C500F0D733 /* Main.storyboard in Resources */,
+				8353516B1E688CEB0003E40B /* chatsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,9 +181,11 @@
 				83FADB2F1E675133008CF23B /* registerViewController.swift in Sources */,
 				F4CD04D11E1F19C500F0D733 /* AppDelegate.swift in Sources */,
 				83FADB2C1E6735E1008CF23B /* TableViewCellPass.swift in Sources */,
+				8353516D1E688FA00003E40B /* ChatsTableViewController.swift in Sources */,
 				83FADB211E66461C008CF23B /* TabBarViewController.swift in Sources */,
 				F4CD04D91E1F19C500F0D733 /* OraCodeChallengeIOS.xcdatamodeld in Sources */,
 				83FADB261E672D33008CF23B /* TableViewCellText.swift in Sources */,
+				8353516A1E688CEB0003E40B /* chatsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,31 @@
 
 import UIKit
 
+
+
+
 class MainMenuViewController: UITabBarController {
     
-    var username : String!
+    var name : String!
     var password : String!
+    var email : String!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(username)
+        print(name)
         // Do any additional setup after loading the view.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("in prepare")
+        let destination = segue.destination as! accountTableViewController
+        destination.name = self.name
+        destination.password = self.password
+        destination.email = self.email
+        //performSegue(withIdentifier: UIStoryboardSegue, sender: <#T##Any?#>)
+    }
+    
     
 
     /*
