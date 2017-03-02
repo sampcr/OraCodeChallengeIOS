@@ -26,6 +26,9 @@ class loginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         getName(email: usernameTextField.text!, password: passwordTextField.text!)
+        print(self.useremail)
+        print(usernameTextField.text)
+        sleep(1);
         if(self.useremail == usernameTextField.text){
             password = passwordTextField.text!
             performSegue(withIdentifier: loginIdentifier, sender: self)
@@ -45,8 +48,8 @@ class loginViewController: UIViewController {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-        
-        request.httpBody = "{\n  \"email\": \(email)\",\n  \"password\": \(password)\"\n}".data(using: .utf8)
+        print("{\n  \"email\": \(email)\",\n  \"password\": \"secret\"\n}")
+        request.httpBody = "{\n  \"email\": \(email)\",\n  \"password\": \"secret\"\n}".data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response, let data = data {
