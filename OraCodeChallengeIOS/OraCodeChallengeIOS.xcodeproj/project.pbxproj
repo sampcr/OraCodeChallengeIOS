@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8303FFAA1E7D82CA00EE44B6 /* UserDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8303FFA91E7D82CA00EE44B6 /* UserDataClass.swift */; };
 		8353516A1E688CEB0003E40B /* chatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835351681E688CEB0003E40B /* chatsCell.swift */; };
 		8353516B1E688CEB0003E40B /* chatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835351691E688CEB0003E40B /* chatsCell.xib */; };
 		8353516D1E688FA00003E40B /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8353516C1E688FA00003E40B /* ChatsTableViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8303FFA91E7D82CA00EE44B6 /* UserDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataClass.swift; sourceTree = "<group>"; };
 		835351681E688CEB0003E40B /* chatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatsCell.swift; sourceTree = "<group>"; };
 		835351691E688CEB0003E40B /* chatsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chatsCell.xib; sourceTree = "<group>"; };
 		8353516C1E688FA00003E40B /* ChatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				83FADB251E672D33008CF23B /* TableViewCellText.xib */,
 				F4CD04D71E1F19C500F0D733 /* OraCodeChallengeIOS.xcdatamodeld */,
 				F4CD04E91E1F2E3400F0D733 /* loginViewController.swift */,
+				8303FFA91E7D82CA00EE44B6 /* UserDataClass.swift */,
 				F4CD04EB1E1F3E5C00F0D733 /* MainMenuViewController.swift */,
 			);
 			path = OraCodeChallengeIOS;
@@ -184,6 +187,7 @@
 				8353516D1E688FA00003E40B /* ChatsTableViewController.swift in Sources */,
 				83FADB211E66461C008CF23B /* TabBarViewController.swift in Sources */,
 				F4CD04D91E1F19C500F0D733 /* OraCodeChallengeIOS.xcdatamodeld in Sources */,
+				8303FFAA1E7D82CA00EE44B6 /* UserDataClass.swift in Sources */,
 				83FADB261E672D33008CF23B /* TableViewCellText.swift in Sources */,
 				8353516A1E688CEB0003E40B /* chatsCell.swift in Sources */,
 			);

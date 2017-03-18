@@ -213,7 +213,6 @@
         <!--Root View Controller-->
         <scene sceneID="7nL-fI-9Gy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-6B-MCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="hry-JI-h5z" customClass="ChatsTableViewController" customModule="OraCodeChallengeIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RjP-Pt-8Eg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -224,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0v-tg-gag" id="siq-Ov-bzG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -235,14 +234,49 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="KM6-Jp-tAp"/>
+                    <connections>
+                        <segue destination="4ih-eh-GGG" kind="show" identifier="chat" id="mSo-ab-V35"/>
+                    </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-6B-MCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2727" y="-552"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vMM-wR-ZyG">
+            <objects>
+                <viewController id="4ih-eh-GGG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="css-cF-uWv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yfe-B1-fgb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V0C-ko-TCw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made it to the next controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT9-l2-MvG">
+                                <rect key="frame" x="59" y="38" width="316" height="245"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aT9-l2-MvG" firstAttribute="top" secondItem="css-cF-uWv" secondAttribute="bottom" constant="18" id="1Mf-AQ-wdA"/>
+                            <constraint firstAttribute="trailing" secondItem="aT9-l2-MvG" secondAttribute="trailing" id="4AU-L0-HIq"/>
+                            <constraint firstItem="Yfe-B1-fgb" firstAttribute="top" secondItem="aT9-l2-MvG" secondAttribute="bottom" constant="384" id="Lcp-Ja-lbD"/>
+                            <constraint firstItem="aT9-l2-MvG" firstAttribute="leading" secondItem="V0C-ko-TCw" secondAttribute="leading" constant="59" id="fjd-1E-N9T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVa-H0-6QV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608.8000000000002" y="-550.07496251874068"/>
         </scene>
         <!--Chats-->
         <scene sceneID="Dgp-M5-h9n">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RR2-uJ-VMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="ZSS-I7-i6w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chats" id="uDa-6c-5h0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BiP-mS-6cW">
@@ -253,6 +287,7 @@
                         <segue destination="hry-JI-h5z" kind="relationship" relationship="rootViewController" id="DB0-2m-ANY"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RR2-uJ-VMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1780" y="-551"/>
         </scene>

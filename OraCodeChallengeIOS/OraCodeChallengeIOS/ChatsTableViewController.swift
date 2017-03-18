@@ -18,12 +18,16 @@ struct chatCellData {
 
 class ChatsTableViewController: UITableViewController {
     var data = [chatCellData] ();
+    let chatIdentifier = "chat"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         data = [chatCellData(date: "Today",subject: "A Chat With Chris",personTime: "Chris - 12:46",msg: "whatsup bro"),
                 chatCellData(date: "Yesterday",subject: "A Chat With Addison",personTime: "Addison - 1:15",msg: "when will you be back?")]
+        // tableView.rowHeight = UITableViewAutomaticDimension
+        // tableView.estimatedRowHeight = 140
+        tableView.rowHeight = 140;
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -59,7 +63,17 @@ class ChatsTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("clicked on a cell!");
+        performSegue(withIdentifier: "chat", sender: self)
+    }
  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == chatIdentifier) {
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

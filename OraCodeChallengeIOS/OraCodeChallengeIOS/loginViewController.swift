@@ -18,6 +18,7 @@ class loginViewController: UIViewController {
     var username = "";
     var useremail = "";
     var password = "";
+    var data:UserDataClass = UserDataClass();
     
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -25,11 +26,12 @@ class loginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBAction func loginButton(_ sender: UIButton) {
-        getName(email: usernameTextField.text!, password: passwordTextField.text!)
+        data = getName(email: usernameTextField.text!, password: passwordTextField.text!)
         print(self.useremail)
         print(usernameTextField.text)
-        sleep(1);
-        if(self.useremail == usernameTextField.text){
+        //try using a data class instead of needing to sleep
+        //sleep(1);
+        if(data.getUser() == data.getPass()){
             password = passwordTextField.text!
             performSegue(withIdentifier: loginIdentifier, sender: self)
         } else {
@@ -43,13 +45,15 @@ class loginViewController: UIViewController {
     }
     
     
-    func getName(email: String, password: String){
+    func getName(email: String, password: String) -> UserDataClass{
         let url = URL(string: "https://private-93240c-oracodechallenge.apiary-mock.com/auth/login")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
         print("{\n  \"email\": \(email)\",\n  \"password\": \"secret\"\n}")
         request.httpBody = "{\n  \"email\": \(email)\",\n  \"password\": \"secret\"\n}".data(using: .utf8)
+        
+        let udata = UserDataClass()
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response, let data = data {
@@ -62,12 +66,14 @@ class loginViewController: UIViewController {
                     
                     if let nestedDictionary = dictionary["data"] as? [String: Any] {
                         // access nested dictionary values by key
-                        let name = nestedDictionary["name"] as? String
-                        self.username = name!
+                        let name = nestedDictionary["name"] as! String
+                        self.username = name
                         print(name)
-                        let email = nestedDictionary["email"] as? String
-                        self.useremail = email!
+                        let email = nestedDictionary["email"] as! String
+                        self.useremail = email
                         print(email)
+                        udata.user = name
+                        udata.pass = email
                     }
                 }
 
@@ -75,8 +81,8 @@ class loginViewController: UIViewController {
                 print(error)
             }
         }
-        
         task.resume()
+        return udata
     }
 
     override func viewDidLoad() {

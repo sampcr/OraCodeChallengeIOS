@@ -7,3 +7,33 @@
 //
 
 import Foundation
+
+class UserDataClass {
+    var user:String = "";
+    var pass:String = "";
+    
+    init(user:String, pass:String) {
+        self.user = user;
+        self.pass = pass;
+    }
+    
+    init() {
+        
+    }
+    
+    func setUser(user:String) {
+        self.user = user;
+    }
+    
+    func setPass(pass:String) {
+        self.pass = pass;
+    }
+    
+    func getUser() -> String {
+        return self.user;
+    }
+    
+    func getPass() -> String {
+        return self.pass;
+    }
+}
