@@ -162,7 +162,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iGe-Ec-bJ0" id="LgT-Sl-uXM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="739.88005997001505"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Messages-->
         <scene sceneID="7nL-fI-9Gy">
             <objects>
                 <tableViewController id="hry-JI-h5z" customClass="ChatsTableViewController" customModule="OraCodeChallengeIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0v-tg-gag" id="siq-Ov-bzG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -233,52 +233,53 @@
                             <outlet property="delegate" destination="hry-JI-h5z" id="Gjl-xs-SyF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="KM6-Jp-tAp"/>
+                    <navigationItem key="navigationItem" title="Messages" id="KM6-Jp-tAp"/>
                     <connections>
-                        <segue destination="4ih-eh-GGG" kind="show" identifier="chat" id="mSo-ab-V35"/>
+                        <segue destination="TxF-ix-ZZA" kind="show" identifier="chat" id="RLD-q5-DEe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-6B-MCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2727" y="-552"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vMM-wR-ZyG">
+        <!--Chat Table View Controller-->
+        <scene sceneID="uXX-HQ-ZXJ">
             <objects>
-                <viewController id="4ih-eh-GGG" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="css-cF-uWv"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yfe-B1-fgb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="V0C-ko-TCw">
+                <tableViewController id="TxF-ix-ZZA" customClass="chatTableViewController" customModule="OraCodeChallengeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xl6-zg-Y9j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made it to the next controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT9-l2-MvG">
-                                <rect key="frame" x="59" y="38" width="316" height="245"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aT9-l2-MvG" firstAttribute="top" secondItem="css-cF-uWv" secondAttribute="bottom" constant="18" id="1Mf-AQ-wdA"/>
-                            <constraint firstAttribute="trailing" secondItem="aT9-l2-MvG" secondAttribute="trailing" id="4AU-L0-HIq"/>
-                            <constraint firstItem="Yfe-B1-fgb" firstAttribute="top" secondItem="aT9-l2-MvG" secondAttribute="bottom" constant="384" id="Lcp-Ja-lbD"/>
-                            <constraint firstItem="aT9-l2-MvG" firstAttribute="leading" secondItem="V0C-ko-TCw" secondAttribute="leading" constant="59" id="fjd-1E-N9T"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PVa-H0-6QV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="fzV-ri-5mF">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="86u-h1-xwe" customClass="chatTableViewCell" customModule="OraCodeChallengeIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="86u-h1-xwe" id="MZy-o9-PMZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TxF-ix-ZZA" id="VXi-7g-vaY"/>
+                            <outlet property="delegate" destination="TxF-ix-ZZA" id="8de-Ff-fNg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNz-6b-Poc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.8000000000002" y="-550.07496251874068"/>
+            <point key="canvasLocation" x="3558" y="-551"/>
         </scene>
         <!--Chats-->
         <scene sceneID="Dgp-M5-h9n">
             <objects>
                 <navigationController id="ZSS-I7-i6w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" id="uDa-6c-5h0"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="Chat-50" id="uDa-6c-5h0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BiP-mS-6cW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -308,7 +309,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCc-TC-g8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="36"/>
+            <point key="canvasLocation" x="887" y="46"/>
         </scene>
         <!--Account-->
         <scene sceneID="2ce-7R-DYI">
@@ -337,7 +338,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3B2-Jv-jQj" id="duR-kA-4GD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -371,7 +372,7 @@
                             <constraint firstAttribute="trailing" secondItem="19C-vC-FG7" secondAttribute="trailing" id="yst-NN-yeO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="DFJ-RX-9D7"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="User-50" id="DFJ-RX-9D7"/>
                     <connections>
                         <outlet property="alertLabel" destination="zVO-aZ-Uog" id="7Cr-oY-Uso"/>
                         <outlet property="saveButton" destination="hfp-Ie-lSo" id="JN5-YL-NEJ"/>
@@ -408,7 +409,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DkE-Hh-lxG" id="SnS-Fh-hdf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -453,4 +454,8 @@
             <point key="canvasLocation" x="1845.5999999999999" y="178.56071964017991"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Chat-50" width="25" height="25"/>
+        <image name="User-50" width="25" height="25"/>
+    </resources>
 </document>

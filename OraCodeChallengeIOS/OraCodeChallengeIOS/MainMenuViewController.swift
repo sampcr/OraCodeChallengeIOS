@@ -20,7 +20,9 @@ class MainMenuViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(name)
+        print("ladedah")
+        //var destinationViewController = MainMenuViewController.targetViewController(accountTableViewController) as! accountTableViewController
+        //performSegue(withIdentifier: "AccountSegue", sender: self)
         // Do any additional setup after loading the view.
     }
 
@@ -30,7 +32,7 @@ class MainMenuViewController: UITabBarController {
         destination.name = self.name
         destination.password = self.password
         destination.email = self.email
-        //performSegue(withIdentifier: UIStoryboardSegue, sender: <#T##Any?#>)
+        
     }
     
     

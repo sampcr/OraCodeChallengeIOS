@@ -29,7 +29,10 @@ class accountTableViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
+        print("the data is: ")
+        print(name);
+        print(email);
+        print(password);
         data = [cellData(type: 1,label: "Name", text: name),
                 cellData(type: 1,label: "Email", text: email),
                 cellData(type: 2,label: "Password", text: password),
