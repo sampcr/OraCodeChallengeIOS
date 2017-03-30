@@ -21,11 +21,11 @@ class chatTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
+        
 
         data =
             [chatMessageCellData(isSender: false, msg: "Hello"),
-             chatMessageCellData(isSender: true, msg: "Hows it going my good sir, you are looking great today"),chatMessageCellData(isSender: false, msg: "Thanks man, I put a lot of effort into my outfit for the day, what are you up to today?"),
-             chatMessageCellData(isSender: true, msg: "Not much, I'm going to see my beautiful girlfrend!")]
+             chatMessageCellData(isSender: true, msg: "Hows it going my good sir, you are looking great today")]
     }
 
     override func didReceiveMemoryWarning() {

@@ -23,8 +23,16 @@ class ChatsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        data = [chatCellData(date: "Today",subject: "A Chat With Chris",personTime: "Chris - 12:46",msg: "whatsup bro"),
-                chatCellData(date: "Yesterday",subject: "A Chat With Addison",personTime: "Addison - 1:15",msg: "when will you be back?")]
+        let ctvc = ChatsTableViewController()
+        ctvc.getData {theData in
+            print(theData.message)
+            self.data = [chatCellData(date: theData.time, subject: theData.subject, personTime: theData.name, msg: theData.message)]
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
+        }
+        
+        
         // tableView.rowHeight = UITableViewAutomaticDimension
         // tableView.estimatedRowHeight = 140
         tableView.rowHeight = 140;
@@ -33,6 +41,51 @@ class ChatsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func getData(completion:@escaping (chatsDataClass) -> ()) {
+        let dataClass = chatsDataClass()
+        let url = URL(string: "https://private-93240c-oracodechallenge.apiary-mock.com/chats?page=&limit=")!
+        var request = URLRequest(url: url)
+        request.addValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer BBJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9", forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let response = response, let data = data {
+                print("~!!!!")
+                //print(String(data: data, encoding: .utf8))
+                let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                
+                if let dictionary = json as? [String:Any] {
+                    print("~!~!")
+                    print(dictionary)
+                    if let nestedDictionary = dictionary["data"] as? [[String: Any]] {
+                        print("@@@@")
+                        let nestedData = nestedDictionary[0]
+                        let subject = nestedData["name"] as! String
+                        print(subject)
+                        if let lastChat = nestedData["last_chat_message"] as? [String: Any] {
+                            let msgDate = lastChat["created_at"] as! String
+                            print(msgDate)
+                            let message = lastChat["message"] as! String
+                            print(message)
+                            if let lastUser = lastChat["user"] as? [String: Any] {
+                                let name = lastUser["name"] as! String
+                                print(name)
+                                dataClass.setName(name: name)
+                                dataClass.setSubject(subject: subject)
+                                dataClass.setTime(time: msgDate)
+                                dataClass.setMessage(message: message)
+                                completion(dataClass)
+                            }
+                        }
+                    }
+                }
+            } else {
+                print(error)
+            }
+        }
+        task.resume()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +102,9 @@ class ChatsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        print("Checking number of rows")
+        print(self.data.count)
+        return self.data.count
     }
 
     
